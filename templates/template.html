@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        tr, td, th {
+            border: black 2px solid;
+        }
+        a {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    {% block body %}
+    <h2>Home page</h2>
+    <ul>
+        <li>
+            <a href=/table>table</a>
+        </li>
+        <li>
+            <a href="/edit">edit</a>
+        </li>
+        <li>
+            <a href="/delete">delete</a>
+        </li>
+    </ul>
+        {% endblock %}
+    {% if not is_home %}
+        <a href="/">home_page</a>
+    {% endif %}
+</body>
+</html>
